@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
-using StackOverflowAPI_DAL.Contracts;
-using StackOverflowAPI_DAL.ErrorModel;
+using StackOverflowAPI_BAL.Contracts;
+using StackOverflowAPI_BAL.ErrorModel;
 using System.Net;
 
 namespace StackOverflowAPI_BAL.Extentions

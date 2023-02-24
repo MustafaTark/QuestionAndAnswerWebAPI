@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackOverflowAPI_DAL.Models
+namespace StackOverflowAPI_BAL.Models
 {
     public class Reply
     {

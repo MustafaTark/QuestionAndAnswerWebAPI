@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace StackOverflowAPI_DAL.Models
+namespace StackOverflowAPI_BAL.Models
 {
     public class Comment
     {
@@ -17,10 +17,10 @@ namespace StackOverflowAPI_DAL.Models
         public LinkedList<LikeToComment>? Likes { get; set; }
         [ForeignKey(nameof(User))]
         public string? UserId { get; set; }
-        public User? UserObject { get; set; }
+       
         [ForeignKey(nameof(Question))]
         public int? QuestionId { get; set; }
-        public Question? QuestionObject { get; set; }
+       
         public Comment()
         {
             Replies=new LinkedList<Reply>();

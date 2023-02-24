@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace StackOverflowAPI_DAL.ErrorModel
+namespace StackOverflowAPI_BAL.ErrorModel
 {
     public class ErrorDetails
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackOverflowAPI_DAL.Configration
+namespace StackOverflowAPI_BAL.Configration
 {
     public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
     {

@@ -1,8 +1,8 @@
 ﻿
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using StackOverflowAPI_DAL.Configration;
-using StackOverflowAPI_DAL.Models;
+using StackOverflowAPI_BAL.Configration;
+using StackOverflowAPI_BAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace StackOverflowAPI_DAL.Data
+namespace StackOverflowAPI_BAL.Data
 {
    public class ApplicationDbContext: IdentityDbContext<User>
     {
@@ -33,12 +33,7 @@ namespace StackOverflowAPI_DAL.Data
           
             base.OnModelCreating(builder);
             builder.ApplyConfiguration(new RoleConfiguration());
-            builder.Entity<Comment>()
-                .HasOne<Question>(q => q.QuestionObject)
-                .WithMany(q=>q.Comments).
-                HasForeignKey(c=>c.QuestionId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .IsRequired();
+           
 
             builder.Entity<Question>()
                 .HasMany<LikeToQuestion>(q=>q.Likes).

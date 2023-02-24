@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using StackOverflowAPI_DAL.Contracts;
-using StackOverflowAPI_DAL.Repository;
+using StackOverflowAPI_BAL.Contracts;
+using StackOverflowAPI_BAL.Repository;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.ComponentModel.Design;
-using StackOverflowAPI_DAL.Dto;
-using StackOverflowAPI_DAL.Models;
+using StackOverflowAPI_BAL.Dto;
+using StackOverflowAPI_BAL.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using StackOverflowAPI_BAL.Filters;
-using StackOverflowAPI_DAL.RequestFeatures;
+using StackOverflowAPI_BAL.RequestFeatures;
 using Newtonsoft.Json;
 
 namespace StackOverflowAPI.Controllers
@@ -64,7 +64,7 @@ namespace StackOverflowAPI.Controllers
         }
         [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
-        public IActionResult CreatComment(int questionId,[FromBody]CommentForCreationDto comment)
+        public  IActionResult CreatComment(int questionId,[FromBody]CommentForCreationDto comment)
         {
             var question = _repository.Question.GetQuestionAsync(questionId, trackChanges: false);
             if (question == null)
@@ -74,7 +74,7 @@ namespace StackOverflowAPI.Controllers
             }
            
             var commentEntity = _mapper.Map<Comment>(comment);
-            _repository.Comment.CreateCommentToQuestion(questionId,commentEntity);
+            _repository.Comment.CreateCommentToQuestion(commentEntity);
             _repository.SaveAsync();
             var questionToReturn = _mapper.Map<QuestionDto>(question);
             return Ok(questionToReturn);

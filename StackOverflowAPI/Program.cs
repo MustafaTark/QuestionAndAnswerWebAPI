@@ -11,11 +11,11 @@ using Microsoft.OpenApi.Models;
 using StackOverflowAPI_BAL;
 using StackOverflowAPI_BAL.Extentions;
 using StackOverflowAPI_BAL.Filters;
-using StackOverflowAPI_DAL.Contracts;
-using StackOverflowAPI_DAL.Data;
-using StackOverflowAPI_DAL.LoggerServices;
-using StackOverflowAPI_DAL.Models;
-using StackOverflowAPI_DAL.Repository;
+using StackOverflowAPI_BAL.Contracts;
+using StackOverflowAPI_BAL.Data;
+using StackOverflowAPI_BAL.LoggerServices;
+using StackOverflowAPI_BAL.Models;
+using StackOverflowAPI_BAL.Repository;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

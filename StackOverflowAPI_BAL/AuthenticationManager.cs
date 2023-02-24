@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using StackOverflowAPI_DAL.Contracts;
-using StackOverflowAPI_DAL.Dto;
-using StackOverflowAPI_DAL.Models;
+using StackOverflowAPI_BAL.Contracts;
+using StackOverflowAPI_BAL.Dto;
+using StackOverflowAPI_BAL.Models;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

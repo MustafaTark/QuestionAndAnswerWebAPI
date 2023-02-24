@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using StackOverflowAPI_BAL.Filters;
-using StackOverflowAPI_DAL.Contracts;
-using StackOverflowAPI_DAL.Dto;
-using StackOverflowAPI_DAL.Models;
+using StackOverflowAPI_BAL.Contracts;
+using StackOverflowAPI_BAL.Dto;
+using StackOverflowAPI_BAL.Models;
 
 namespace StackOverflowAPI.Controllers
 {

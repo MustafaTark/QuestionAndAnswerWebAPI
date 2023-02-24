@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using StackOverflowAPI_BAL.Filters;
-using StackOverflowAPI_DAL.Contracts;
-using StackOverflowAPI_DAL.Dto;
-using StackOverflowAPI_DAL.Models;
-using StackOverflowAPI_DAL.Repository;
-using StackOverflowAPI_DAL.RequestFeatures;
+using StackOverflowAPI_BAL.Contracts;
+using StackOverflowAPI_BAL.Dto;
+using StackOverflowAPI_BAL.Models;
+using StackOverflowAPI_BAL.Repository;
+using StackOverflowAPI_BAL.RequestFeatures;
 using System.Xml.Linq;
 
 namespace StackOverflowAPI.Controllers
@@ -66,7 +66,7 @@ namespace StackOverflowAPI.Controllers
             }
         }
       
-        [HttpPost,Authorize]
+        [HttpPost]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public IActionResult CreatQuestion([FromBody]QuestionForCreationDto question)
         {

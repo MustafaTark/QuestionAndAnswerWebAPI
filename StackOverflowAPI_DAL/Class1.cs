@@ -1,4 +1,4 @@
-﻿namespace StackOverflowAPI_DAL
+﻿namespace StackOverflowAPI_BAL
 {
     public class Class1
     {
