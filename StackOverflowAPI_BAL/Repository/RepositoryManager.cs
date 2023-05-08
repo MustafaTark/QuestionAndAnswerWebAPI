@@ -12,8 +12,8 @@ namespace StackOverflowAPI_BAL.Repository
     {
         private readonly ApplicationDbContext _repositoryContext;
         private  IQuestionRepositery _questionRepositery;
-        public  ICommentRepositery _commentRepositery;
-        public ITagRepositery _tagRepositery;
+        private  ICommentRepositery _commentRepositery;
+        private ITagRepositery _tagRepositery;
         public RepositoryManager(
             ApplicationDbContext repositeryContext,
             IQuestionRepositery questionRepositery,

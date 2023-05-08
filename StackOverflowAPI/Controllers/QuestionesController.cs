@@ -27,8 +27,6 @@ namespace StackOverflowAPI.Controllers
             _mapper = mapper;
         }
         [HttpGet("{tagId}")]
-       
-        //[ProducesResponseType(200, Type = typeof(IEnumerable<Question>))]
         public async Task<IActionResult> GetQuestiones(int tagId,[FromQuery]QuestionParamters questionParamters)
         {
             var tag =await _repository.Tag.GetTagAsync(tagId, trackChanges: false);
@@ -59,11 +57,11 @@ namespace StackOverflowAPI.Controllers
                 _logger.LogInfo($"Question with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
-            else
-            {
-                var questionDto = _mapper.Map<QuestionDto>(question);
-                return Ok(questionDto);
-            }
+          
+            var questionDto = _mapper.Map<QuestionDto>(question);
+            
+            return Ok(questionDto);
+           
         }
       
         [HttpPost]

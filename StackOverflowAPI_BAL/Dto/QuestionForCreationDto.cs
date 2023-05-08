@@ -13,6 +13,7 @@ namespace StackOverflowAPI_BAL.Dto
 
         public string? Content { get; set; }
         public DateTime? Created { get; set; }
-        public ICollection<Tag>? Tags { get; set; }
+        public ICollection<TagForCreationDto>? Tags { get; set; }
+        public string? UserId { get; set; }
     }
 }

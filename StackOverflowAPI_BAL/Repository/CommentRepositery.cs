@@ -32,10 +32,9 @@ namespace StackOverflowAPI_BAL.Repository
              .ToListAsync();
             return PagedList<Comment>.ToPagedList(comments, commentParameters.PageNumber, commentParameters.PageSize)!;
         }
-        public void CreateCommentToQuestion(Comment comment) {
-            //comment.QuestionId = questionId;
+        public void CreateCommentToQuestion(Comment comment) =>
             Create(comment);
-        }
+      
 
         public void DeleteComment(Comment comment) => 
             Delete(comment);

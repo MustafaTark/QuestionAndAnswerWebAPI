@@ -49,11 +49,14 @@ namespace StackOverflowAPI.Controllers
             {
                 _logger.LogWarn($"{nameof(Authenticate)}: Authentication failed. Wrong user name or password.");
                 return Unauthorized();
-            } 
+            }
+            
+            var userToReturn =await _userManager.FindByNameAsync(user.UserName);
             return Ok(
             new 
             {
-                Token = await _authManager.CreateToken() 
+                Token = await _authManager.CreateToken() ,
+                Id = userToReturn.Id,
             }
             );
         }
