@@ -20,7 +20,7 @@ A community-driven platform constructing a comprehensive repository of questions
 ## Technologies Used
 The Medical Website project utilizes the following technologies:
 
-- .NET Core
+- .NET Core 6
 - Entity Framework Core
 - SignalR
 - RESTful API
