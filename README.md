@@ -26,8 +26,6 @@ The Medical Website project utilizes the following technologies:
 - RESTful API
 - Identity Framework
 - Swagger
-## Demo 
-https://drive.google.com/file/d/1v4N9QlQWo_E2I7UaGTPV7zRWaxu2R0JW/view?usp=sharing
 
 ## Installation
 - Clone the repository to your local machine:
